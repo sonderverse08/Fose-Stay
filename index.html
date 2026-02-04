@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fose Stay</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" class="logo-link">
+                    <i class="fa-brands fa-atlassian"></i>
+                    <span class="logo-text">FOSE STAY</span>
+                </a>
+            </div>
+
+            <div class="nav-menu">
+                <a href="#" class="nav-item"><i class="fi fi-vn"></i> Tiếng Việt</a>
+                <a href="#" class="nav-item">Đăng nhập</a>
+                <a href="#" class="nav-item nav-signup">Đăng ký</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="sub-header">
+            <div class="sub-header-image">
+            </div>
+            <div class="type-selection">
+                <div class="type-icon-header">
+                <button class="type-icon">
+                    <i class="fa-regular fa-hourglass"></i> Theo giờ
+                </button>
+                <button class="type-icon">
+                    <i class="fa-solid fa-moon"></i> Qua đêm
+                </button>
+                <button class="type-icon">
+                    <i class="fa-regular fa-calendar"></i> Theo ngày
+                </button>
+                </div>
+                <form class="type-form">
+                    <div class="form-group">
+                        <label for="location">
+                            <i class="fas fa-map-marker-alt"></i> Địa điểm
+                        </label>
+                        <input type="text" id="location" placeholder="Bạn muốn đi đâu?" autocomplete="off">
+                    <div id="location-dropdown" class="dropdown-menu">
+                    <div class="dropdown-item"><i class="fas fa-city"></i> Hồ Chí Minh</div>
+                    <div class="dropdown-item"><i class="fas fa-city"></i> Hà Nội</div>
+                    <div class="dropdown-item"><i class="fas fa-city"></i> Đà Nẵng</div>
+                    <div class="dropdown-item"><i class="fas fa-city"></i> Đà Lạt</div>
+                    <div class="dropdown-item"><i class="fas fa-city"></i> Bà Rịa- Vũng Tàu</div>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkin">
+                            <i class="fas fa-calendar-alt"></i> Nhận phòng
+                        </label>
+                        <input type="date" id="checkin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkout">
+                            <i class="fas fa-calendar-alt"></i> Trả phòng
+                        </label>
+                        <input type="date" id="checkout" required>
+                    </div>
+
+                    <button type="submit" class="btn-search">
+                        <i class="fas fa-search"></i> Tìm kiếm
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="suggestion">
+            <div class="suggestion-container">
+                <button class="suggestion-btn prev">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+                </button>
+
+                <div class="suggestion-wrapper">
+                    <div class="suggestion-track">
+                        <div class="suggestion-item">
+                            <div class="suggestion-icon">
+                                <i class="fa-solid fa-tags"></i>
+                            </div>
+                            <p>Voucher 39K <br> Stay Hết Ý</p>
+                        </div>
+
+                        <div class="suggestion-item">
+                            <div class="suggestion-icon">
+                                <i class="fa-regular fa-face-grin-hearts"></i>
+                            </div>
+                            <p>Top Stay <br> Được Chọn</p>
+                        </div>
+
+                        <div class="suggestion-item">
+                        <div class="suggestion-icon">
+                        <i class="fa-solid fa-venus-mars"></i>
+                        </div>
+                        <p>Love <br> Room</p>
+                        </div>
+
+                        <div class="suggestion-item">
+                        <div class="suggestion-icon">
+                        <i class="fa-regular fa-comments"></i>
+                        </div>
+                        <p>Review</p>
+                        </div>
+
+                        <div class="suggestion-item">
+                        <div class="suggestion-icon">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                        </div>
+                        <p>Dining</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="suggestion-btn next">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="exploration">
+            <h2 style="margin-left: 15%;">Lần đầu khám phá</h2>
+            <div class="exploration-grid">
+                <div class="exploration-card">
+                    <div class="card-content">
+                        <h3>Thành viên mới? Quà chất đang đợi!</h3>
+                        <p>Nhận coupon giảm 50% với người dùng mới</p>
+                        <a href="#" class="card-link">Đăng ký ngay</a>
+                    </div>
+                    <div class="card-image">
+                        <img src="./assets/images/gift.svg" alt="Quà tặng" class="big-svg">
+                    </div>
+                </div>
+
+                <div class="exploration-card">
+                    <div class="card-content">
+                        <h3>Nhận ưu đãi liên tục khi bạn tải app!</h3>
+                        <p>Sử dụng ứng dụng để săn deals mỗi ngày</p>
+                        <a href="#" class="card-link">Tải App</a>
+                    </div>
+                    <div class="card-qr">
+                        <img style="padding-right: 1px;" src="./assets/images/qr.svg" alt="Quà tặng" class="big-svg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-hotel">
+            <h2>Fose Stay gợi ý</h2>
+            <div class="hotels-grid">
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="assets/images/room_1.jpg" alt="La Maison En Adagio">
+                    </div>
+                    <div class="hotel-info">
+                        <div class="hotel-header">
+                            <h3>La Maison En Adagio</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (253)</span>
+                            </div>
+                        </div>
+                        <div class="hotel-discount">
+                            <i class="fas fa-tag"></i> Giảm 20%
+                        </div>
+                        <div class="hotel-price">
+                            <span>Chỉ từ</span>
+                            <strong>999.000đ / 1 đêm</strong>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="assets/images/room_2.jpg" alt="La Maison En Adagio">
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-header">
+                        <h3>La Maison En Adagio</h3>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (647)</span>
+                        </div>
+                    </div>
+                    <div class="hotel-discount">
+                        <i class="fas fa-tag"></i> Giảm 20%
+                    </div>
+                    <div class="hotel-price">
+                        <span>Chỉ từ</span>
+                        <strong>3.000.000đ / 1 đêm</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="assets/images/room_3.jpg" alt="La Maison En Adagio">
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-header">
+                        <h3>La Maison En Adagio</h3>
+                        <div class="hotel-rating">
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (327)</span>
+                        </div>
+                    </div>
+                    <div class="hotel-discount">
+                        <i class="fas fa-tag"></i> Giảm 20%
+                    </div>
+                    <div class="hotel-price">
+                        <span>Chỉ từ</span>
+                        <strong>1.000.000đ / 1 đêm</strong>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </section>
+
+        <section class="advise">
+            <h2>Lời khuyên cần biết</h2>
+        </section>
+
+    </main>
+
+<script src="js/main.js"></script>
+</body>
+</body>
+
+</html>
