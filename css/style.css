@@ -676,10 +676,11 @@ button{
     }
 
     .nav-menu {
-        display: none; 
+        display: flex; 
         position: absolute;
-        top: 60px; 
-        right: 0;
+        border: solid 1px black;
+        top: 80px; 
+        left: 194px;
         width: 200px;
         background-color: #ffffff;
         flex-direction: column;
@@ -687,11 +688,17 @@ button{
         box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
         z-index: 1000;
         gap: 15px;
-        border-radius: 0 0 0 15px;
+        border-radius: 15px 0 0 15px;
+        opacity: 0;               
+        visibility: hidden;         
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
     }
 
     .menu-checkbox:checked ~ .nav-menu {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .nav-item {
@@ -727,17 +734,17 @@ button{
     }
 
     .sub-header-image {
-        width: 100%;
+        width: 90%;
         height: 140px;
-        border-radius: 0;
+        border-radius: 10px;
     }
 
     .type-selection {
         position: relative; 
-        top: -30px;
+        top: -70px;
         left: 0;            
         transform: none;   
-        width: 92% !important; 
+        width: 80% !important; 
         margin: 0 auto;    
         height: auto;
         padding: 15px;
@@ -755,6 +762,18 @@ button{
         border: 1px solid #ddd;
         border-radius: 10px;
         padding: 10px;
+    }
+
+    .form-group label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .form-group input {
+        margin: auto;      
+        text-align: center;
     }
 
     .form-group::after { display: none; }
