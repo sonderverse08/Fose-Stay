@@ -712,6 +712,11 @@ button{
         font-size: 16px;
     }
 
+    .fi-vn {
+    margin-right: 3px;
+    font-size: medium;
+    }
+
 
     /* ----------------------------------------------------- */
     .sub-header {
