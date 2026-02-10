@@ -730,7 +730,8 @@ button{
         flex-direction: column;
         align-items: center;
         padding: 0;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        border: solid 1px red;
     }
 
     .sub-header-image {
@@ -748,6 +749,7 @@ button{
         margin: 0 auto;    
         height: auto;
         padding: 15px;
+        margin-bottom: -120px;
     }
 
     .type-form {
@@ -779,21 +781,111 @@ button{
     .form-group::after { display: none; }
 
     .btn-search {
-        width: 100%;
+        width: 50%;
         margin: 5px 0 0 0;
         padding: 15px;
         border-radius: 10px;
     }
 
     /* ------------------------------------------- */
-    .suggestion-container, 
-    .top-hotel, 
+.suggestion-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.suggestion-wrapper{
+    overflow: hidden;
+    flex: 1;
+}
+
+.suggestion-track{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 10px;
+    justify-content: flex-start;
+    transition: transform 0.2s ease-in-out;
+    width: max-content;
+    width: 100%;
+}
+
+.suggestion-item{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    align-items: center;
+    font-size: 12px;
+    flex: 0 0 140px;
+    height: 120px;
+    width: 120px;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s;
+    background-color: #f5f5f5;
+
+}
+
+.suggestion-item:hover{
+    transform: scale(1.03);
+    background-color: #f5f5f5;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-icon{
+    font-size: 30px;
+    color: #002d5b;
+    margin-bottom: 8px;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    outline:none;
+    background-color: transparent;
+}
+
+.suggestion-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    z-index: 1000;
+}
+
+.fa-circle-chevron-left, .fa-circle-chevron-right{
+    font-size: 40px;
+    color: #002d5b;
+    border: none;
+    outline: none;}
+
+.prev {
+    left: -14px;
+}
+
+.next {
+    right: -18px;
+}
+
+
+
+/*--------------------------------------------*/
+
+.exploration h2{
+    margin-left: 20px !important; 
+}
+      .top-hotel, 
     .advise {
         width: 92% !important; 
         margin: 0 auto !important; 
         padding: 20px 0 !important; 
     }
-
+    
     .advise-grid {
         grid-template-columns: 1fr; 
         grid-template-rows: auto;
@@ -819,7 +911,6 @@ button{
         margin-bottom: 15px;
     }
 }
-
 
 @media screen and (min-width: 481px) {
     .hamburger, .menu-checkbox {
