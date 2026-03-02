@@ -28,7 +28,17 @@
         </label>
 
             <div class="nav-menu">
-                <a href="#" class="nav-item"><i class="fi fi-vn"></i> Tiếng Việt</a>
+                <div class="lang-dropdown">
+                    <a href="#" class="nav-item lang-current">
+                        <i class="fi fi-vn"></i> Tiếng Việt <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <div class="lang-list">
+                        <a href="#"><i class="fi fi-gb"></i> English</a>
+                        <a href="#"><i class="fi fi-kr"></i> Korean</a>
+                        <a href="#"><i class="fi fi-jp"></i> Japanese</a>
+
+                    </div>
+                </div>
                 <a href="#" class="nav-item">Đăng nhập</a>
                 <a href="#" class="nav-signup">Đăng ký</a>
             </div>
@@ -51,40 +61,39 @@
                     <i class="fa-regular fa-calendar"></i> Theo ngày
                 </button>
                 </div>
-                <form class="type-form">
-                    <div class="form-group">
-                        <label for="location">
-                            <i class="fas fa-map-marker-alt"></i> Địa điểm
-                        </label>
-                        <input type="text" id="location" placeholder="Bạn muốn đi đâu?" autocomplete="off">
+            <form class="type-form">
+                <div class="form-group">
+                    <label for="location">
+                        <i class="fas fa-map-marker-alt"></i> Địa điểm
+                    </label>
+                    <input type="text" id="location" name="location" placeholder="Bạn muốn đi đâu?" autocomplete="off">
+                    
                     <div id="location-dropdown" class="dropdown-menu">
-                    <div class="dropdown-item"><i class="fas fa-city"></i> Hồ Chí Minh</div>
-                    <div class="dropdown-item"><i class="fas fa-city"></i> Hà Nội</div>
-                    <div class="dropdown-item"><i class="fas fa-city"></i> Đà Nẵng</div>
-                    <div class="dropdown-item"><i class="fas fa-city"></i> Đà Lạt</div>
-                    <div class="dropdown-item"><i class="fas fa-city"></i> Bà Rịa- Vũng Tàu</div>
-                    <div class="dropdown-item"><i class="fas fa-city"></i>Hải Phòng</div>
+                        <div class="dropdown-item"><i class="fas fa-city"></i> Hồ Chí Minh</div>
+                        <div class="dropdown-item"><i class="fas fa-city"></i> Hà Nội</div>
+                        <div class="dropdown-item"><i class="fas fa-city"></i> Cần Thơ</div>
+                        <div class="dropdown-item"><i class="fas fa-city"></i> Đà Nẵng</div>
                     </div>
-                    </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="checkin">
-                            <i class="fas fa-calendar-alt"></i> Nhận phòng
-                        </label>
-                        <input type="date" id="checkin" required>
-                    </div>
+                <div class="form-group">
+                    <label for="checkin">
+                        <i class="fas fa-calendar-alt"></i> Nhận phòng
+                    </label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="checkout">
-                            <i class="fas fa-calendar-alt"></i> Trả phòng
-                        </label>
-                        <input type="date" id="checkout" required>
-                    </div>
+                <div class="form-group">
+                    <label for="checkout">
+                        <i class="fas fa-calendar-alt"></i> Trả phòng
+                    </label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
 
-                    <button type="submit" class="btn-search">
-                        <i class="fas fa-search"></i> Tìm kiếm
-                    </button>
-                </form>
+                <button type="submit" class="btn-search">
+                    <i class="fas fa-search"></i> Tìm kiếm
+                </button>
+            </form>
             </div>
         </section>
 
@@ -107,7 +116,7 @@
                             <div class="suggestion-icon">
                                 <i class="fa-regular fa-face-grin-hearts"></i>
                             </div>
-                            <p>Top Stay <br> Đượ Chọn</p>
+                            <p>Top Stay <br> Được Chọn</p>
                         </div>
 
                         <div class="suggestion-item">

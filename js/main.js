@@ -1,63 +1,62 @@
-const locationInput = document.getElementById('location');
-const dropdown = document.getElementById('location-dropdown');
+document.addEventListener('DOMContentLoaded', function() {
+    const langDropdown = document.querySelector('.lang-dropdown');
+    const langCurrent = document.querySelector('.lang-current');
+    const langList = document.querySelector('.lang-list');
 
-locationInput.addEventListener('focus', () => {
-    dropdown.classList.add('show');
-});
-
-document.querySelectorAll('.dropdown-item').forEach(item => {
-    item.addEventListener('click', () => {
-        locationInput.value = item.textContent.trim();
-        dropdown.classList.remove('show');
-    });
-});
-
-document.addEventListener('click', (e) => {
-    if (!locationInput.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('show');
+    if (langCurrent) {
+        langCurrent.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation(); 
+            langList.classList.toggle('show');
+            langDropdown.classList.toggle('active');
+        });
     }
-});
 
+    const locationInput = document.getElementById('location');
+    const dropdown = document.getElementById('location-dropdown');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
 
-// -------------------------------------------------------------
-const track = document.querySelector('.suggestion-track');
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
+    if (locationInput) {
+        locationInput.addEventListener('focus', () => {
+            dropdown.classList.add('show');
+        });
 
-let isTransitioning = false; 
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                locationInput.value = this.textContent.trim();
+                dropdown.classList.remove('show');
+                e.stopPropagation(); 
+            });
+        });
+    }
 
-nextBtn.addEventListener('click', () => {
-    if (isTransitioning) return; 
-    isTransitioning = true;
+    document.addEventListener('click', function(e) {
+        if (langDropdown && !langDropdown.contains(e.target)) {
+            langList.classList.remove('show');
+            langDropdown.classList.remove('active');
+        }
+        if (locationInput && !locationInput.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove('show');
+        }
+    });
 
-    const itemWidth = document.querySelector('.suggestion-item').offsetWidth + 20; 
+    const dateInputs = document.querySelectorAll('input[type="date"]');
+    dateInputs.forEach(input => {
+        input.addEventListener('click', function() {
+            if (typeof this.showPicker === 'function') {
+                this.showPicker();
+            }
+        });
+    });
 
-    track.style.transition = "transform 0.5s ease-in-out";
-    track.style.transform = `translateX(-${itemWidth}px)`;
-
-    setTimeout(() => {
-        track.style.transition = "none"; 
-        track.appendChild(track.firstElementChild); 
-        track.style.transform = `translateX(0)`; 
-        isTransitioning = false;
-    }, 500); 
-});
-
-prevBtn.addEventListener('click', () => {
-    if (isTransitioning) return;
-    isTransitioning = true;
-
-    const itemWidth = document.querySelector('.suggestion-item').offsetWidth + 20;
-
-    track.style.transition = "none";
-    track.prepend(track.lastElementChild);
-    
-
-    track.style.transform = `translateX(-${itemWidth}px) `;
-
-    setTimeout(() => {
-        track.style.transition = "transform 0.5s ease-in-out";
-        track.style.transform = `translateX(0)`;
-        setTimeout(() => { isTransitioning = false; }, 500);
-    }, 10);
+    const searchForm = document.querySelector('.type-form');
+    searchForm.addEventListener('submit', function(e) {
+        const loc = document.getElementById('location').value;
+        if (!loc) {
+            alert("Vui lòng chọn địa điểm!");
+            e.preventDefault(); 
+            return;
+        }
+        console.log("Form đang được gửi...");
+    });
 });
